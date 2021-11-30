@@ -1,0 +1,56 @@
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__logo {
+  @media (max-width: 650px) {
+    width: 90px;
+    height: auto;
+  }
+}
+
+.header__left-side {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.header__text {
+  line-height: 1.33;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+.header__contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__phone {
+  font-size: 22px;
+  margin-bottom: 0;
+  color: $black;
+  margin-bottom: 5px;
+  font-weight: 500;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $black;
+    text-decoration: underline;
+  }
+}
+
+.header__callback {
+  @include reset-btn;
+  font-size: 14px;
+  text-decoration: underline;
+  color: $black
+}
