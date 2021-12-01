@@ -41,7 +41,11 @@
   text-transform: uppercase;
 
   span {
-    background-color: $purple;
+    color: $purple;
+  }
+
+  @media (max-width: 1120px) {
+    margin-bottom: 20px;
   }
 
   @media (max-width: 991px) {

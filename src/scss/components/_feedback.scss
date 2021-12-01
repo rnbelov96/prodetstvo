@@ -1,0 +1,146 @@
+.feedback {
+  min-height: 348px;
+  @include bg;
+  background-image: url('/src/img/bgs/feedback-bg.png');
+  padding-top: 75px;
+  padding-bottom: 75px;
+  position: relative;
+  top: -118px;
+  margin-bottom: -118px;
+
+  @media (max-width: 1120px) {
+    top: -36px;
+    margin-bottom: -36px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: none;
+    background: linear-gradient(107.96deg, #B1C4FF 3.83%, #7899FF 48.38%, #FFB9FC 95.22%);
+    top: 0px;
+    margin-bottom: 0;
+  }
+}
+
+.line-form {
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  width: 1300px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 28px;
+  padding-left: 95px;
+  padding-right: 95px;
+  padding-bottom: 30px;
+
+  @media (max-width: 1330px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1120px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 940px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 650px) {
+    min-height: auto;
+    padding: 20px;
+  }
+}
+
+.line-form__title {
+  font-size: 22px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (max-width: 650px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.line-form__input-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 940px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 890px) {
+    flex-direction: column;
+  }
+}
+
+.line-form__input-box {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+
+  @media (max-width: 940px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+}
+
+.line-form__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(#a9a9a9, 0.2);
+  padding-bottom: 7px;
+  font-size: 16px;
+  color: $black;
+
+  &::-webkit-input-placeholder {
+    color: #a9a9a9;
+  }
+
+  &::-moz-placeholder {
+    color: #a9a9a9;
+  }
+
+  &:-ms-input-placeholder {
+    color: #a9a9a9;
+  }
+
+  &:-moz-placeholder {
+    color: #a9a9a9;
+  }
+
+  &:focus, &:hover, &:active {
+    border-bottom: 2px solid $black;
+  }
+}
+
+.line-form__policy {
+  font-size: 12px;
+  text-align: center;
+  color: #a9a9a9;
+  margin-bottom: 0;
+  margin-top: 10px;
+
+  @media (max-width: 650px) {
+    font-size: 12px !important;
+  }
+
+  button {
+    @include reset-btn;
+    color: #a9a9a9;
+    text-decoration: underline;
+    font-size: 12px;
+  }
+}
