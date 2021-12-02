@@ -1,0 +1,76 @@
+.consult {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include bg;
+  background-image: url('/src/img/bgs/consult-bg.jpg');
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.consult__content {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 650px) {
+    gap: 20px;
+  }
+}
+
+.consult__left-side {
+  @include max-width(635px);
+}
+
+.consult__title {
+  @include title;
+  color: white;
+}
+
+.consult__text {
+  @include max-width(440px);
+  margin-left: auto;
+  font-size: 22px;
+  line-height: 1.27;
+  margin-bottom: 28px;
+  color: white;
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.consult__note {
+  font-size: 22px;
+  line-height: 1.27;
+  margin-bottom: 0;
+  position: relative;
+  color: white;
+
+  &::after {
+    position: absolute;
+    bottom: -78px;
+    left: 378px;
+    content: url('/src/img/consult-arrow.svg');
+
+    @media (max-width: 1070px) {
+      content: none;
+    }
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

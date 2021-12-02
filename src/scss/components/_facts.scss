@@ -1,3 +1,15 @@
+.facts_bottom {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  @include bg;
+  background-image: url('/src/img/bgs/facts-bg-bottom.jpg');
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 .facts_top {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -7,7 +19,7 @@
 
   @media (max-width: 650px) {
     padding-top: 30px;
-    padding-bottom: 1 0px;
+    padding-bottom: 30px;
   }
 }
 
@@ -16,6 +28,10 @@
 
   &_top {
     @include max-width(704px);
+  }
+
+  &_bottom {
+    @include max-width(920px);
   }
 }
 
@@ -33,14 +49,18 @@
     }
   }
 
-  @media (max-width: 1120px) {
-    margin-left: 0;
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
+  &_bottom {
+    position: relative;
+    top: -37px;
+    @include max-width(693px);
+    left: -30px;
+    margin-bottom: -5px;
 
-  @media (max-width: 650px) {
-    margin-bottom: 20px;
+    @media (max-width: 1120px) {
+      margin-bottom: 30px;
+      left: 0px;
+      top: 0px;
+    }
   }
 
   &_top {
@@ -51,6 +71,16 @@
       left: 0px;
     }
   }
+
+  @media (max-width: 1120px) {
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
 }
 
 .facts__list-title {
@@ -60,6 +90,10 @@
   color: $blue;
   text-transform: uppercase;
   margin-bottom: 5px;
+
+  &_bottom {
+    @include max-width(950px);
+  }
 }
 
 .facts__list {
@@ -72,6 +106,19 @@
       top: -313px;
       right: -393px;
       content: url('/src/img/facts-top-img.png');
+
+      @media (max-width: 1300px) {
+        content: none;
+      }
+    }
+  }
+
+  &_bottom {
+    &::after {
+      position: absolute;
+      top: -137px;
+      right: -406px;
+      content: url('/src/img/facts-bottom-img.png');
 
       @media (max-width: 1300px) {
         content: none;
