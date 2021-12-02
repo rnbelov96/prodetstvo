@@ -1,16 +1,41 @@
 /* eslint-disable no-param-reassign */
 export {};
 
-const leftColor = '#FADE40';
-const rightColor = '#ffffff';
+const leftColor = '#FFBC0E';
+const rightColor = '#ffbb0e93';
 
 const rangeElList = document.querySelectorAll('.js-range');
 
-const rentRange = document.querySelector('.js-rent-range') as HTMLInputElement;
-const trainingRange = document.querySelector(
-  '.js-training-range',
+const yaselRange = document.querySelector(
+  '.js-yasel-range',
 ) as HTMLInputElement;
-const roomRange = document.querySelector('.js-room-range') as HTMLInputElement;
+const oldRange = document.querySelector('.js-old-range') as HTMLInputElement;
+const youngRange = document.querySelector(
+  '.js-young-range',
+) as HTMLInputElement;
+const dopRange = document.querySelector('.js-dop-range') as HTMLInputElement;
+
+const yaselRangeLineEl = document.querySelector(
+  '.js-yasel-line',
+) as HTMLDivElement;
+const oldRangeLineEl = document.querySelector('.js-old-line') as HTMLDivElement;
+const youngRangeLineEl = document.querySelector(
+  '.js-young-line',
+) as HTMLDivElement;
+const dopRangeLineEl = document.querySelector('.js-dop-line') as HTMLDivElement;
+
+const yaselEndpointsElList = [
+  ...(document.querySelector('.js-yasel-endpoints') as Element).children,
+] as HTMLDivElement[];
+const oldEndpointsElList = [
+  ...(document.querySelector('.js-old-endpoints') as Element).children,
+] as HTMLDivElement[];
+const youngEndpointsElList = [
+  ...(document.querySelector('.js-young-endpoints') as Element).children,
+] as HTMLDivElement[];
+const dopEndpointsElList = [
+  ...(document.querySelector('.js-dop-endpoints') as Element).children,
+] as HTMLDivElement[];
 
 const resultLabelEl = document.querySelector(
   '.js-calc-result',
@@ -18,13 +43,17 @@ const resultLabelEl = document.querySelector(
 
 let result: number;
 
-let personCurrentStep = 2;
-let adultsCurrentStep = 2;
-let kidsCurrentStep = 2;
+let yaselCurrentStep = 5;
+let oldCurrentStep = 5;
+let youngCurrentStep = 5;
+let dopCurrentStep = 5;
 
 const calcResult = () => {
-  result = (Number(rentRange.value) * 4500 + Number(trainingRange.value) * 10500)
-    * Number(roomRange.value);
+  result = (Number(yaselRange.value) * 4500
+      + Number(oldRange.value) * 1050
+      + Number(youngRange.value) * 2000
+      + Number(dopRange.value) * 3000)
+    * 0.5;
   resultLabelEl.textContent = result.toLocaleString();
   return result;
 };
@@ -45,49 +74,93 @@ rangeElList.forEach(el => {
   )}%, ${rightColor} 100%)`;
 });
 
-rentRange.addEventListener('input', e => {
+yaselRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
+
+  yaselEndpointsElList[yaselCurrentStep].classList.remove(
+    'calc__endpoint_active',
+  );
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  personCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  yaselCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  yaselRangeLineEl.style.width = `${yaselCurrentStep * 10}%`;
+
+  yaselEndpointsElList[yaselCurrentStep].classList.add('calc__endpoint_active');
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (yaselCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (yaselCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-trainingRange.addEventListener('input', e => {
+oldRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
+
+  oldEndpointsElList[oldCurrentStep].classList.remove('calc__endpoint_active');
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  adultsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  oldCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  oldRangeLineEl.style.width = `${oldCurrentStep * 10}%`;
+
+  oldEndpointsElList[oldCurrentStep].classList.add('calc__endpoint_active');
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (oldCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (oldCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-roomRange.addEventListener('input', e => {
+youngRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
+
+  youngEndpointsElList[youngCurrentStep].classList.remove(
+    'calc__endpoint_active',
+  );
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  kidsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  youngCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  youngRangeLineEl.style.width = `${youngCurrentStep * 10}%`;
+
+  youngEndpointsElList[youngCurrentStep].classList.add('calc__endpoint_active');
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (youngCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (youngCurrentStep / steps) * 100,
+  )}%, ${rightColor} 100%)`;
+
+  calcResult();
+});
+
+dopRange.addEventListener('input', e => {
+  const rangeEl = e.currentTarget as HTMLInputElement;
+
+  dopEndpointsElList[dopCurrentStep].classList.remove('calc__endpoint_active');
+
+  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  dopCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  dopRangeLineEl.style.width = `${dopCurrentStep * 10}%`;
+
+  dopEndpointsElList[dopCurrentStep].classList.add('calc__endpoint_active');
+
+  rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
+    (dopCurrentStep / steps) * 100,
+  )}%, ${rightColor} ${String(
+    (dopCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();

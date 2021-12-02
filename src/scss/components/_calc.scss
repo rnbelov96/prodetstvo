@@ -1,22 +1,157 @@
+.calc {
+  min-height: 731px;
+  @include bg;
+  background-image: url('/src/img/bgs/calc-bg.jpg');
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.calc__title {
+  color: white;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  @media (max-width: 1040px) {
+    text-align: center;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.calc__content {
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+  padding-left: 65px;
+  padding-right: 65px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  @media (max-width: 1040px) {
+    @include max-width(650px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 650px) {
+    padding: 20px;
+    border-radius: 20px;
+  }
+}
+
+.calc__input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
+
+  @media (max-width: 650px) {
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.calc__input-box {
+  @include max-width(475px);
+  margin-bottom: 10px;
+}
+
+.calc__input-label {
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 17px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 2px;
+  }
+}
+
+.calc__endpoints {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__endpoint {
+  font-size: 22px;
+
+  &_active {
+    font-weight: bold;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+}
+
+.calc__text-box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 650px) {
+    gap: 15px;
+  }
+}
+
+.calc__result-box {
+  @include max-width(475px)
+}
+
+.calc__result-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.calc__result {
+  font-size: 32px;
+  margin-bottom: 0;
+
+  span {
+    font-weight: bold;
+    font-size: 52px;
+    color: $blue;
+
+    @media (max-width: 650px) {
+      font-size: 32px;
+    }
+  }
+}
+
 .calc__input {
   width: 100%;
-  height: 10px;
-  margin-bottom: 7px;
+  height: 3.5px;
+  margin-bottom: 17px;
+  border-radius: 8px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   background: linear-gradient(
     to right,
-    black 0%,
-    black 50%,
-    white 50%,
-    white 100%
+    #ffbc0e 0%,
+    #ffbc0e 50%,
+    #ffbb0e93 50%,
+    #ffbb0e93 100%
   );
-  background-color: white;
-
-  &:focus {
-    outline: none;
-  }
+  background-color: #ffbc0e;
+  outline: none;
 
   &::-webkit-slider-thumb {
     width: 32px;
@@ -29,8 +164,13 @@
     cursor: pointer;
     outline: none;
     border: none;
-    box-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
+
+    @media (max-width: 650px) {
+      width: 20px;
+      height: 20px;
+    }
 
     &:hover,
     &:focus {
@@ -51,8 +191,13 @@
     cursor: pointer;
     outline: none;
     border: none;
-    box-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
+
+    @media (max-width: 650px) {
+      width: 20px;
+      height: 20px;
+    }
 
     &:hover,
     &:focus {
@@ -72,8 +217,13 @@
     cursor: pointer;
     outline: none;
     border: none;
-    box-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
+
+    @media (max-width: 650px) {
+      width: 20px;
+      height: 20px;
+    }
 
     &:hover,
     &:focus {
@@ -82,5 +232,26 @@
       border: none;
       box-shadow: none;
     }
+  }
+}
+
+.calc__input-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.calc__input-line {
+  width: 100%;
+  height: 10px;
+  background-color: #ffbc0e;
+  border-radius: 8px;
+  position: absolute;
+  pointer-events: none;
+  top: 12.5px;
+  width: 50%;
+  z-index: -1;
+
+  @media (max-width: 650px) {
+    height: 7px;
   }
 }

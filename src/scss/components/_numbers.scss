@@ -1,0 +1,129 @@
+.numbers {
+  background: rgba(45, 70, 147, 0.05);
+  padding-top: 60px;
+  padding-bottom: 84px;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+  }
+}
+
+.numbers__title {
+  @include title;
+}
+
+.numbers__text {
+  padding-left: 377px;
+  @include max-width(912px);
+  font-size: 28px;
+  margin-bottom: 52px;
+
+  @media (max-width: 800px) {
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.numbers__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  @include max-width(800px);
+
+  @media (max-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  @media (max-width: 650px) {
+    gap: 30px;
+  }
+}
+
+.numbers__item {
+  @include max-width(340px);
+  padding-left: 94px;
+  position: relative;
+  font-size: 28px;
+
+  @media (max-width: 650px) {
+    padding-left: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    top: -20px;
+
+    @media (max-width: 650px) {
+      content: none !important;
+    }
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/numbers/#{$i}.svg');
+    }
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 1.27;
+    font-weight: bold;
+  }
+
+  b {
+    font-weight: bold;
+    font-size: 38px;
+
+    @media (max-width: 650px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.numbers__container {
+  position: relative;
+}
+
+.numbers__owner-img {
+  position: absolute;
+  right: -406px;
+  top: -345px;
+
+  @media (max-width: 1500px) {
+    right: -292px;
+    top: -332px;
+  }
+
+  @media (max-width: 1200px) {
+    position: relative;
+    right: 0;
+    top: 0;
+    @include max-width(645px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 650px) {
+    margin-top: 20px;
+  }
+}
