@@ -1,0 +1,139 @@
+.footer {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  background-color: #001659;
+  color: white;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__owner,
+.footer__data,
+.footer__address,
+.footer__company-name {
+  font-size: 16px;
+  margin-bottom: 16px;
+
+  @media (max-width: 680px) {
+    text-align: center;
+  }
+}
+
+.footer__address {
+  padding-left: 35px;
+  position: relative;
+
+  @media (max-width: 680px) {
+    text-align: left;
+    width: 209px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &::before {
+    position: absolute;
+    width: 27.29px;
+    height: 32px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include bg;
+    background-image: url('/src/img/icons/flag.png');
+    content: '';
+  }
+}
+
+.footer__policy {
+  @include reset-btn;
+  color: white;
+  font-size: 14px;
+  text-decoration: underline;
+
+  @media (max-width: 680px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer__right-side {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  @media (max-width: 680px) {
+    align-items: center;
+  }
+}
+
+.footer__contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (max-width: 680px) {
+    align-items: center;
+  }
+}
+
+.footer__phone {
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.footer__callback {
+  @include reset-btn;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 13px;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.footer__insta {
+  width: 32px;
+  height: 32px;
+  @include bg;
+  background-image: url('/src/img/icons/insta.svg');
+  margin-bottom: 17px;
+}
+
+.footer__franch5 {
+  padding-left: 54px;
+  position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+    text-decoration: underline;
+  }
+
+  &::before {
+    top: -3px;
+    left: 0px;
+    content: url('/src/img/icons/f5.svg');
+    position: absolute;
+  }
+}

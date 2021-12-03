@@ -4,91 +4,207 @@
 @import './base/mixins.scss';
 @import './base/global.scss';
 @import './components/modal.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
 @import './components/priv-policy.scss';
 
-.thanks,
-.error {
-  display: flex;
+.thanks__html,
+.thanks__body {
   height: 100%;
+}
+
+.thanks__body {
+  background-image: url('/src/img/bgs/thanks-bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.thanks__wrapper {
+  display: flex;
   flex-direction: column;
+}
 
-  &__body {
-    background-color: black;
-  }
+.thanks__footer {
+  flex: 0 0 auto;
+}
 
-  &__body,
-  &__html {
-    height: 100%;
-  }
+.thanks__header {
+  flex: 0 0 auto;
+}
 
-  &__header {
+.thanks__container,
+.thanks__main,
+.thanks__wrapper {
+  height: 100%;
+}
+
+.thanks__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thanks {
+  padding-top: 37px;
+  padding-bottom: 37px;
+  flex: 1 0 auto;
+
+  @media (max-width: 1700px) {
     overflow: hidden;
-    flex: 0 0 auto;
+  }
+
+  @media (max-width: 650px) {
     padding-top: 20px;
-    padding-bottom: 30px;
-  }
-
-  .container {
-    max-width: 1140px;
-  }
-
-  footer {
-    flex: 0 0 auto;
-  }
-
-  &__content {
-    flex: 1 0 auto;
-    padding: 40px 0;
-
-    .container {
-      height: 100%;
-    }
-  }
-
-  &__content-wrapper {
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
-
-  &__content-box {
-    width: 100%;
-  }
-
-  &__title {
-    color: white;
-    font-size: 30px;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  &__user-name {
-    text-transform: uppercase;
-  }
-
-  &__subtitle {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-  }
-
-  &__link {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-
-  &__btn-box {
-    display: flex;
-    justify-content: center;
+    padding-bottom: 20px;
   }
 }
 
-.error {
-  &__btn-box {
-    margin-top: 20px;
+.thanks__content {
+  @include max-width(825px);
+  position: relative;
+
+  @media (max-width: 1120px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.thanks__owner {
+  position: absolute;
+  right: -573px;
+  top: -86px;
+
+  @media (max-width: 1700px) {
+    top: -50px;
+  }
+
+  @media (max-width: 1300px) {
+    right: -400px;
+  }
+
+  @media (max-width: 1120px) {
+    top: 0px;
+    right: 0;
+    position: relative;
+    @include max-width(541px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+.thanks__title {
+  font-size: 34px;
+  line-height: 1.12;
+  margin-bottom: 15px;
+}
+
+.thanks__text {
+  @include max-width(635px);
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 15px;
+}
+
+.thanks__work-time {
+  @include max-width(645px);
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+
+  b {
+    font-weight: bold;
+  }
+}
+
+.thanks__note {
+  @include max-width(600px);
+  font-size: 16px;
+  line-height: 1.18;
+  margin-bottom: 15px;
+}
+
+.thanks__list-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.thanks__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 74px;
+  margin-bottom: 22px;
+
+  @media (max-width: 720px) {
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.thanks__item {
+  padding-right: 85px;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.4;
+
+  a {
+    color: black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+
+  &:nth-child(1)::after {
+    width: 60px;
+    height: 60px;
+    background-image: url('/src/img/icons/insta-thanks.svg');
+  }
+  &:nth-child(2)::after {
+    width: 65px;
+    height: 65px;
+    background-image: url('/src/img/icons/logo-thanks.png');
+  }
+
+  &::after {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    @include bg;
+  }
+}
+
+.thanks__mark {
+  font-weight: 600;
+  color: $blue;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.thanks__back-link {
+  color: #7b00b5;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 20px;
+  display: inline-block;
+
+  @media (max-width: 1120px) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

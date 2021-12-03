@@ -6,44 +6,105 @@
     <title>Франшиза «»</title>
   </head>
   <body class="thanks__body">
-    <section class="thanks__header">
-      <div class="container">
-        <header class="header header_thanks">
-        </header>
-      </div>
-    </section>
-    <section class="thanks">
-      <div class="thanks__content">
+    <div class="thanks__wrapper">
+      <header class="header thanks__header">
         <div class="container">
-          <div class="thanks__content-wrapper">
-            <div class="thanks__content-box">
-              <h1 class="thanks__title">
-                <span class="thanks__user-name js-name"></span>, НАШИ МЕНЕДЖЕРЫ УЖЕ
-                ЗАНИМАЮТСЯ ВАШЕЙ ЗАЯВКОЙ
-              </h1>
-              <h2 class="thanks__subtitle">
-                Мы свяжемся с Вами в ближайшее время
-              </h2>
-              <div class="thanks__btn-box">
-                <a class="thanks__link" href="doc/mk.pdf">
-                  <div class="button__wrapper button__wrapper">
-                    <button type="button" class="button button_without-logo">
-                      Скачать презентацию
-                    </button>
-                    <div class="button__bg button__bg_thanks"></div>
-                  </div>
-                </a>
-              </div>
+          <div class="header__content">
+            <div class="header__left-side">
+              <img
+                src="./img/icons/logo.png"
+                alt="Логотип компании"
+                class="header__logo"
+                width="95"
+                height="94"
+              />
             </div>
           </div>
         </div>
-      </div>
-      <footer class="footer footer_thanks">
+      </header>
+      <section class="thanks">
+        <div class="container thanks__container">
+          <div class="thanks__main">
+            <div class="thanks__content">
+              <h1 class="thanks__title">
+                <span class="thanks__user-name js-name"></span>, благодарим Вас
+                за обращение в компанию «Продетство»©
+              </h1>
+              <p class="thanks__text">
+                Для обсуждения сотрудничества мы свяжемся с вами в ближайшее
+                время.
+              </p>
+              <p class="thanks__work-time">
+                <b>График работы:</b> <br />
+                с понедельника по пятницу <br />
+                <b>По нашему местному времени в г. Благовещенск:</b>
+                с&nbsp;09:00&nbsp;до&nbsp;18:00 <br />
+                <b>По московскому времени:</b> с&nbsp;14:00&nbsp;до&nbsp;19:00
+              </p>
+              <p class="thanks__note">
+                Если вы оставили заявку в нерабочее время
+                или в выходной/праздничный день — мы перезвоним вам в ближайший
+                рабочий день.
+              </p>
+              <p class="thanks__list-title">
+                А пока познакомьтесь ближе с компанией и командой
+              </p>
+              <ul class="thanks__list">
+                <li class="thanks__item">
+                  <a href="#">
+                    Жизнь компании <br />
+                    и команды в соц.сетях:
+                  </a>
+                </li>
+                <li class="thanks__item"><a href="#">Главный сайт бренда:</a></li>
+              </ul>
+              <p class="thanks__mark">
+                Узнайте, как устроена работа детского сада вживую — приглашаем
+                в гости или проведём онлайн-презентацию детского сада.
+              </p>
+              <a href="/" class="thanks__back-link">Вернуться на главную</a>
+              <img
+                src="./img/owner-thanks.png"
+                alt="Основатель компании Мария Сафронова"
+                class="thanks__owner"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer thanks__footer">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__left-side">
+              <p class="footer__owner">ИП Сафронова Мария Анатольевна</p>
+              <p class="footer__data">ИНН 280111678800</p>
+              <address class="footer__address">
+                РФ, Амурская область, г. Благовещенск
+              </address>
+              <p class="footer__company-name">© «Продетство», 2012-2021 гг.</p>
+              <button class="footer__policy js-policy">
+                Политика конфиденциальности
+              </button>
+            </div>
+            <div class="footer__right-side">
+              <div class="footer__contact-box">
+                <a href="tel:+" class="footer__phone"> +7 (909) 817-70-10</a
+                ><button class="footer__callback js-callback">
+                  Заказать звонок
+                </button>
+              </div>
+              <a href="" class="footer__insta"></a
+              ><a href="" class="footer__franch5"
+                >Упаковка и продвижение <br />
+                франшиз: «Франчайзинг5»</a
+              >
+            </div>
+          </div>
+        </div>
       </footer>
-    </section>
-
-    <div class="modal">
     </div>
+
+    <div class="modal"></div>
 
     <div class="modal">
       <div class="priv-policy priv-policy_modal">
@@ -66,7 +127,8 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Название Компании».
+            Оператор может получить о посетителях веб-сайта компании «Название
+            Компании».
           </li>
         </ol>
 
@@ -192,9 +254,8 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом email@mail.ru с пометкой «Отказ
-            от уведомлений о новых продуктах и услугах и специальных
-            предложениях».
+            электронной почты с доменом email@mail.ru с пометкой «Отказ от
+            уведомлений о новых продуктах и услугах и специальных предложениях».
           </li>
           <li class="priv-policy__item">
             3. Обезличенные данные Пользователей, собираемые с помощью сервисов

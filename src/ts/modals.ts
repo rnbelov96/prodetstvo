@@ -5,12 +5,16 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'на бесплатную консультацию',
-    button: 'Получить консультацию',
+    title: 'Получите подробные материалы о франшизе и бесплатную консультацию',
+    button: 'получить материалы',
   },
   {
-    title: 'на презентацию франшизы и финансовую модель',
-    button: 'Получить презентацию',
+    title: 'Получите подробные материалы о франшизе и бесплатную консультацию',
+    button: 'получить материалы',
+  },
+  {
+    title: 'Зафиксируйте вашу прибыль',
+    button: 'Отправить',
   },
 ];
 
@@ -92,8 +96,12 @@ presentBtnElList.forEach(btn => {
   });
 });
 
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
-youtubeAdvBtnCallEl?.addEventListener('click', () => {
-  openedModalList.unshift(youtubeAdvModalEl);
-  openModal(youtubeAdvModalEl as HTMLDivElement);
+const incomeBtnElList = document.querySelectorAll('.js-income');
+incomeBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    openedModalList.unshift(formModalEl);
+    formTitleEl.textContent = modalFormInfoList[2].title;
+    formBtnEl.textContent = modalFormInfoList[2].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
 });

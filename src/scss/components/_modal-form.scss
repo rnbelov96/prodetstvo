@@ -18,6 +18,20 @@
       display: none;
     }
   }
+
+  &_info {
+    .modal-form__title {
+      font-size: 22px;
+    }
+  }
+
+  &_modal {
+    width: 98%;
+
+    .modal-form__title {
+      text-align: left;
+    }
+  }
 }
 
 .modal-form__title {
