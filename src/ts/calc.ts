@@ -49,11 +49,11 @@ let youngCurrentStep = 5;
 let dopCurrentStep = 5;
 
 const calcResult = () => {
-  result = (Number(yaselRange.value) * 4500
-      + Number(oldRange.value) * 1050
-      + Number(youngRange.value) * 2000
-      + Number(dopRange.value) * 3000)
-    * 0.5;
+  result = (Number(yaselRange.value) * 19500
+      + Number(oldRange.value) * 20500
+      + Number(youngRange.value) * 19500
+      + Number(dopRange.value) * 5000)
+    * 0.38;
   resultLabelEl.textContent = result.toLocaleString();
   return result;
 };
