@@ -15,30 +15,24 @@
 
 .controll__title {
   @include title;
+  color: #242424;
+  margin-bottom: 8px;
+  @include max-width(928px);
+
+  span {
+    color: $blue;
+  }
 }
 
 .controll__text {
-  @include max-width(637px);
-  margin-left: auto;
+  @include max-width(827px);
   font-size: 22px;
   line-height: 1.27;
-  margin-bottom: 27px;
-
-  span {
-    font-size: 28px;
-    @media (max-width: 650px) {
-      font-size: 18px;
-    }
-  }
+  margin-bottom: 16px;
 
   @media (max-width: 1120px) {
     margin-left: 0;
     max-width: 100%;
-    margin-bottom: 30px;
-  }
-
-  @media (max-width: 650px) {
-    margin-bottom: 20px;
   }
 }
 
@@ -50,8 +44,8 @@
   &::after {
     content: url('/src/img/controll-img.png');
     position: absolute;
-    right: -362px;
-    top: -78px;
+    right: -505px;
+    top: -158px;
 
     @media (max-width: 1120px) {
       content: none;
@@ -66,9 +60,7 @@
 .controll__top-list-title {
   margin-bottom: 0px;
   font-weight: bold;
-  font-size: 28px;
-  text-transform: uppercase;
-  color: $blue;
+  font-size: 22px;
 
   @media (max-width: 650px) {
     margin-bottom: 10px;
@@ -107,12 +99,12 @@
 
   p {
     margin-bottom: 0;
-    font-size: 20px;
-    line-height: 1.4;
-    @include max-width(822px);
+    font-size: 22px;
+    line-height: 1.27;
+    @include max-width(892px);
+    min-height: 90px;
 
     span {
-      text-transform: uppercase;
       font-weight: bold;
     }
   }
@@ -124,10 +116,8 @@
 
 .controll__bottom-list-title {
   font-weight: bold;
-  font-size: 28px;
-  margin-bottom: 26px;
-  text-transform: uppercase;
-  color: $blue;
+  font-size: 22px;
+  margin-bottom: 30px;
   text-align: center;
 
   @media (max-width: 1120px) {
@@ -168,7 +158,7 @@
 
   &::before {
     position: absolute;
-    top: 50%;
+    top: 66%;
     transform: translateY(-50%);
     left: 0px;
 
@@ -190,7 +180,6 @@
   font-weight: bold;
   font-size: 22px;
   line-height: 1.27;
-  text-transform: uppercase;
   margin-bottom: 0;
   @media (max-width: 650px) {
     text-align: center;

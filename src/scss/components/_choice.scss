@@ -1,9 +1,9 @@
 .choice {
   @include bg;
   background-image: url('/src/img/bgs/choise-bg.jpg');
-  min-height: 1160px;
+  min-height: 1090px;
   padding-top: 60px;
-  padding-bottom: 54px;
+  padding-bottom: 60px;
 
   @media (max-width: 991px) {
     padding-top: 50px;
@@ -19,24 +19,21 @@
 
 .choice__title {
   @include title;
-  @include max-width(920px);
+  @include max-width(827px);
+  color: black;
+  margin-bottom: 8px;
+
+  span {
+    color: $blue;
+  }
 }
 
 .choice__text {
-  @include max-width(735px);
-  margin-bottom: 40px;
+  @include max-width(826px);
+  margin-bottom: 6px;
   font-size: 22px;
   line-height: 1.27;
-  top: -38px;
   position: relative;
-  margin-left: auto;
-  margin-bottom: -20px;
-
-  @media (max-width: 1120px) {
-    top: 0px;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
 
   @media (max-width: 650px) {
     margin-bottom: 0;
@@ -50,7 +47,7 @@
   &::after {
     content: url('/src/img/choice-img.png');
     position: absolute;
-    right: -354px;
+    right: -487px;
     top: -34px;
 
     @media (max-width: 1120px) {
@@ -73,24 +70,24 @@
 
   &:nth-child(2) {
     .choice__item-text {
-      @include max-width(635px);
+      @include max-width(888px);
     }
   }
   &:nth-child(3) {
     .choice__item-list {
-      @include max-width(722px);
+      @include max-width(888px);
     }
   }
   &:nth-child(4) {
     .choice__item-text {
-      @include max-width(732px);
+      @include max-width(888px);
     }
   }
 
   &:nth-child(5) {
     border-bottom: none;
     .choice__item-text {
-      @include max-width(635px);
+      @include max-width(888px);
     }
   }
 
@@ -147,7 +144,7 @@
   }
   
   .choice__item-list:last-child {
-    @include max-width(422px);
+    @include max-width(497px);
     .choice__item-item:nth-child(1)::before {
       background: #FFCD82;
     }

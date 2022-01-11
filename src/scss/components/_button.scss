@@ -8,9 +8,10 @@
   padding-left: 7px;
   padding-right: 7px;
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-weight: 700;
-  background: linear-gradient(180deg, #b22df1 0%, #9e00e9 100%);
+  background: linear-gradient(94.31deg, #faf712 22.54%, #ffdb0b 89.07%);
+  box-shadow: 0px 4px 0px #dfbe00;
   border-radius: 177px;
   max-width: 350px;
   width: 100%;
@@ -20,6 +21,20 @@
 
   &_present {
     display: none;
+
+    @media (max-height: 800px) {
+      display: block;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 770px) and (max-height: 1030px) {
+      display: block;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     @media (max-width: 650px) {
       display: block;
@@ -32,17 +47,16 @@
   }
 
   &:hover {
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0.3)
-      ),
-      linear-gradient(180deg, #b22df1 0%, #9e00e9 100%);
+    background: linear-gradient(0deg, #fffc2f, #fffc2f),
+      linear-gradient(94.31deg, #faf712 22.54%, #ffdb0b 89.07%);
   }
 
   &:active {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      linear-gradient(180deg, #b22df1 0%, #9e00e9 100%);
+    background: linear-gradient(0deg, #dfbe00, #dfbe00),
+      linear-gradient(94.31deg, #faf712 22.54%, #ffdb0b 89.07%);
+    box-shadow: none;
+    position: relative;
+    top: 4px;
   }
 
   &::after {

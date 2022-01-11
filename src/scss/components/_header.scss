@@ -1,3 +1,8 @@
+.header_main {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .header_thanks {
   padding-top: 15px;
 }
@@ -10,6 +15,9 @@
 }
 
 .header__logo {
+  width: 72px;
+  height: auto;
+
   @media (max-width: 650px) {
     width: 60px;
     height: auto;
@@ -25,6 +33,7 @@
 .header__text {
   line-height: 1.33;
   margin-bottom: 0;
+  text-align: center;
 
   @media (max-width: 650px) {
     display: none;
@@ -35,6 +44,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: url('/src/img/icons/phone.svg');
+    left: 0px;
+    top: 3px;
+    position: absolute;
+  }
 }
 
 .header__phone {

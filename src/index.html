@@ -20,89 +20,44 @@
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.map&lang=ru-RU"></script>
   </head>
   <body>
+    <header class="header header_main">
+      <div class="container">
+        <div class="header__content">
+          <img
+            src="./img/icons/logo.png"
+            alt="Логотип компании"
+            class="header__logo"
+            width="95"
+            height="94"
+          />
+          <p class="header__text">
+            Детские сады для детей <br />
+            от 1,5 до 7 лет
+          </p>
+          <div class="header__contact-box">
+            <a href="tel:+79098177010" class="header__phone">
+              +7 (909) 817-70-10 </a
+            ><button class="header__callback js-callback">
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="desc">
         <div class="container">
-          <header class="header">
-            <div class="header__content">
-              <div class="header__left-side">
-                <img
-                  src="./img/icons/logo.png"
-                  alt="Логотип компании"
-                  class="header__logo"
-                  width="95"
-                  height="94"
-                />
-                <p class="header__text">
-                  Детские сады для детей <br />
-                  от 1,5 до 7 лет
-                </p>
-              </div>
-              <div class="header__contact-box">
-                <a href="tel:+79098177010" class="header__phone"> +7 (909) 817-70-10 </a
-                ><button class="header__callback js-callback">
-                  Заказать звонок
-                </button>
-              </div>
-            </div>
-          </header>
-
-          <div class="desc__content">
-            <div class="desc__left-side">
-              <h1 class="desc__title">
-                <span>Откройте детский сад</span> <br />
-                по франшизе «Продетство»
-              </h1>
-              <p class="desc__subtitle">
-                и зарабатывайте 80% прибыли от постоянных клиентов
-              </p>
-              <p class="desc__text">
-                Каждый ребёнок посещает детский сад в течение 4-6 лет: заполните
-                все места и
-                <b>
-                  зарабатывайте от 300&nbsp;000 рублей чистой прибыли в месяц.
-                </b>
-              </p>
-            </div>
-            <form class="modal-form modal-form_desc">
-              <h3 class="modal-form__title">
-                Получите презентацию и финансовую модель франшизы
-              </h3>
-              <div class="modal-form__input-box">
-                <input
-                  type="text"
-                  placeholder="+7 (___) ___ ____"
-                  name="phone"
-                  data-type="phone"
-                  class="modal-form__input"
-                />
-                <input
-                  type="email"
-                  placeholder="bestpartner@mail.ru"
-                  name="email"
-                  data-type="email"
-                  class="modal-form__input"
-                />
-                <input
-                  type="text"
-                  placeholder="Мария Анатольевна"
-                  name="name"
-                  data-type="name"
-                  class="modal-form__input"
-                />
-              </div>
-              <button type="submit" class="button button_modal">
-                Получить информацию
-              </button>
-              <p class="modal-form__policy">
-                Я подтверждаю, что ознакомлен и даю согласие на обработку
-                персональных данных на условиях и для целей, определяемых
-                <button type="button" class="js-policy">
-                  Политикой конфиденциальности
-                </button>
-              </p>
-            </form>
-          </div>
+          <h1 class="desc__title">
+            <span>Откройте детский сад по франшизе</span> «Продетство» и
+            зарабатывайте 80% прибыли от постоянных клиентов
+          </h1>
+          <p class="desc__text">
+            Каждый ребёнок посещает детский сад в течение 4-6 лет: заполните все
+            места и
+            <b>
+              зарабатывайте от 300&nbsp;000 рублей чистой прибыли в месяц.
+            </b>
+          </p>
           <ul class="desc__list">
             <li class="desc__item">
               <b>Проконсультируем,</b> <br />
@@ -122,6 +77,56 @@
           <button class="button button_present js-present">
             Получить информацию
           </button>
+        </div>
+      </section>
+      <section class="feedback feedback_desc">
+        <div class="container">
+          <form class="line-form">
+            <h3 class="line-form__title line-form__title_desc">
+              Получите презентацию и финансовую модель франшизы
+            </h3>
+            <div class="line-form__input-container">
+              <div class="line-form__input-box">
+                <div class="line-form__input-wrapper">
+                  <input
+                    type="text"
+                    placeholder="Мария Анатольевна"
+                    name="name"
+                    data-type="name"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-wrapper">
+                  <input
+                    type="text"
+                    placeholder="+7 (___) ___ ____"
+                    name="phone"
+                    data-type="phone"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-wrapper">
+                  <input
+                    type="email"
+                    placeholder="bestpartner@mail.ru"
+                    name="email"
+                    data-type="email"
+                    class="line-form__input"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="button button_line">
+                Получить информацию
+              </button>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен и даю согласие на обработку
+              персональных данных на условиях и для целей, определяемых
+              <button type="button" class="js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
         </div>
       </section>
 
@@ -152,6 +157,8 @@
                   <li class="choice__item-item">
                     Интеллектуальными занятиями и подготовкой к школе.
                   </li>
+                  Основами закаливания и спортивной подготовкой;
+                  Интеллектуальными занятиями и подготовкой к школе.
                 </ul>
               </div>
             </li>
@@ -160,8 +167,7 @@
               <p class="choice__item-text">
                 В детском саду все дети получают одинаковое питание, но при
                 наличии особенностей со здоровьем или религией можно согласовать
-                индивидуальное меню. Разнообразные диеты, «Халяльное» или
-                «Кашерное» меню и др.
+                индивидуальное меню.
               </p>
             </li>
             <li class="choice__item">
@@ -170,11 +176,12 @@
               </p>
               <ul class="choice__item-list">
                 <li class="choice__item-item">
-                  Психолог, который совместно с воспитателем осуществляет
-                  психологическое сопровождение на всех этапах развития.
+                  В детском саду работает психолог, который совместно
+                  с воспитателем осуществляет психологическое сопровождение
+                  на всех этапах развития.
                 </li>
                 <li class="choice__item-item">
-                  Детский сад оснащён интерактивным оборудованием
+                  Деский сад оснащён интерактивным оборудованием
                   «интерактивный пол». Занятия на нём оказываю профилактический
                   эффект от плоскостопия и сколеоза.
                 </li>
@@ -212,11 +219,11 @@
       <section class="about">
         <div class="container">
           <h2 class="about__title">
-            Подробнее <span>о бизнес-модели</span> детского сада:
+            Подробнее <span>о бизнес-модели</span> детского сада: состав групп,
+            дополнительные занятия
           </h2>
           <p class="about__title-text">
-            <span>состав групп, дополнительные занятия</span> <br />
-            По франшизе «Продетство» вы откроете свой детский садик
+            По франшизе «ПРОДЕТСТВО» вы откроете свой детский садик
             по бизнес-модели, которая уже проверена и устойчива более 10 лет.
           </p>
           <p class="about__list-title">
@@ -242,106 +249,84 @@
               </p>
             </li>
           </ul>
-          <p class="about__subtitle">
-            В детском саду — помимо занятий и мероприятий
-          </p>
           <p class="about__text">
-            по общему образованию (ОФП, подготовка к школе и др.) — присутствуют
-            занятия с дополнительной направленностью:
+            В детском саду — помимо занятий и мероприятий по общему образованию
+            (ОФП, подготовка к школе и др.) — присутствуют
+            <b> занятия с дополнительной направленностью:</b>
           </p>
-          <div class="about__list-box">
-            <div class="about__list-container">
-              <ul class="about__list-bottom">
-                <li class="about__item-bottom">
-                  Плавание в бассейне под присмотром инструктора
-                </li>
-                <li class="about__item-bottom">Посещение соляной комнаты</li>
-                <li class="about__item-bottom">Уроки по английскому языку</li>
-                <li class="about__item-bottom">
-                  Углублённая подготовка к школе
-                </li>
-              </ul>
-              <div class="about__img-box">
-                <img
-                  src="./img/gallery/about/1.png"
-                  width="255"
-                  height="254"
-                  class="about__img"
-                />
-                <img
-                  src="./img/gallery/about/2.png"
-                  width="350"
-                  height="254"
-                  class="about__img"
-                />
+
+          <div class="about__content">
+            <div class="about__image-list">
+              <div class="about__image-row">
+                <img src="./img/gallery/about/1.png" class="about__image" />
+                <img src="./img/gallery/about/2.png" class="about__image" />
+              </div>
+              <div class="about__image-row">
+                <img src="./img/gallery/about/3.png" class="about__image" />
+                <img src="./img/gallery/about/4.png" class="about__image" />
               </div>
             </div>
-            <div class="about__list-container">
-              <div class="about__img-box">
-                <img
-                  src="./img/gallery/about/3.png"
-                  width="350"
-                  height="254"
-                  class="about__img"
-                />
-                <img
-                  src="./img/gallery/about/4.png"
-                  width="255"
-                  height="254"
-                  class="about__img"
-                />
-              </div>
-              <ul class="about__list-bottom">
-                <li class="about__item-bottom">Занятия по пластилинографии</li>
-                <li class="about__item-bottom">Закаливание</li>
-                <li class="about__item-bottom">
-                  Гимнастика для детей старшей группы
-                </li>
-                <li class="about__item-bottom">
-                  Занятия по профилактике плоскостопия
-                </li>
-                <li class="about__item-bottom">Пластилинография</li>
-              </ul>
+            <div class="about__list-bottom">
+              <li class="about__item-bottom">
+                Плавание в бассейне с инструктором
+              </li>
+              <li class="about__item-bottom">Посещение соляной комнаты</li>
+              <li class="about__item-bottom">Углублённая подготовка к школе</li>
+              <li class="about__item-bottom">Занятия по пластилинографии</li>
+              <li class="about__item-bottom">Закаливание</li>
+              <li class="about__item-bottom">
+                Гимнастика для детей старшей группы
+              </li>
+              <li class="about__item-bottom">
+                Занятия по профилактике плоскостопия
+              </li>
+              <li class="about__item-bottom">Пластилинография</li>
             </div>
           </div>
           <p class="about__note">
-            <span>Также родители могут усилить обучение своего ребёнка</span>
-            по одному или несколькоим направлениям, приобретая
-            по ним дополнительные занятия.
+            Также родители могут усилить обучение своего ребёнка по одному
+            или несколькоим направлениям, приобретая по ним дополнительные
+            занятия.
           </p>
         </div>
       </section>
 
       <section class="feedback">
         <div class="container">
-          <form class="line-form line-form_desc">
+          <form class="line-form">
             <h3 class="line-form__title">
               Познакомьтесь с компанией и примие участие в онлайн презентации
               детского сада
             </h3>
             <div class="line-form__input-container">
               <div class="line-form__input-box">
-                <input
-                  type="text"
-                  placeholder="+7 (___) ___ ____"
-                  name="phone"
-                  data-type="phone"
-                  class="line-form__input"
-                />
-                <input
-                  type="email"
-                  placeholder="bestpartner@mail.ru"
-                  name="email"
-                  data-type="email"
-                  class="line-form__input"
-                />
-                <input
-                  type="text"
-                  placeholder="Мария Анатольевна"
-                  name="name"
-                  data-type="name"
-                  class="line-form__input"
-                />
+                <div class="line-form__input-wrapper">
+                  <input
+                    type="text"
+                    placeholder="Мария Анатольевна"
+                    name="name"
+                    data-type="name"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-wrapper">
+                  <input
+                    type="text"
+                    placeholder="+7 (___) ___ ____"
+                    name="phone"
+                    data-type="phone"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-wrapper">
+                  <input
+                    type="email"
+                    placeholder="bestpartner@mail.ru"
+                    name="email"
+                    data-type="email"
+                    class="line-form__input"
+                  />
+                </div>
               </div>
               <button type="submit" class="button button_line">
                 Получить информацию
@@ -361,10 +346,11 @@
       <section class="controll">
         <div class="container">
           <h2 class="controll__title">
-            Уделяем <span>максимум внимания</span> качеству услуг,
+            Уделяем
+            <span>максимум внимания качеству услуг,</span> и это приносит свои
+            результаты
           </h2>
           <p class="controll__text">
-            <span>и это приносит свои результаты </span> <br />
             Мы тщательно и систематически следим за качеством услуг по уходу
             и присмотру за детьми т.к. высокий сервис является фактором
             долгосрочных коммерческих отношений с клиентами.
@@ -380,7 +366,7 @@
                 компетенции нанимаемых педагогов и следит за качеством
                 проведения занятий. 2 раза в неделю методист заполняет «карту
                 контроля» с отчётами по проведённым занятиям. Если качество
-                уроков не соответствует стандартам «Продетство», он проводит
+                уроков не соответствует стандартам «ПРОДЕТСТВО», он проводит
                 беседы с педагогом и предпринимает необходимые меры.
               </p>
             </li>
@@ -411,11 +397,12 @@
             <li class="controll__bottom-item">
               <p class="controll__bottom-item-title">Заполняемость мест</p>
               <p class="controll__botton-item-text">
-                в детском саду «Продетство»
+                в детском саду <br />
+                «ПРОДЕТСТВО»
               </p>
             </li>
             <li class="controll__bottom-item">
-              <p class="controll__bottom-item-title">новых воспитанников</p>
+              <p class="controll__bottom-item-title">Новых воспитанников</p>
               <p class="controll__botton-item-text">
                 приходят в детский сад по рекомендациям, которыми родители
                 делятся между собой.
@@ -1057,7 +1044,8 @@
           </div>
           <div class="footer__right-side">
             <div class="footer__contact-box">
-              <a href="tel:+79098177010" class="footer__phone"> +7 (909) 817-70-10</a
+              <a href="tel:+79098177010" class="footer__phone">
+                +7 (909) 817-70-10</a
               ><button class="footer__callback js-callback">
                 Заказать звонок
               </button>

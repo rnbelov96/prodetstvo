@@ -1,12 +1,12 @@
 .feedback {
   min-height: 348px;
   @include bg;
-  background-image: url('/src/img/bgs/feedback-bg.png');
+  background-image: url('/src/img/bgs/feedback-top-bg.png');
   padding-top: 75px;
   padding-bottom: 75px;
   position: relative;
-  top: -118px;
-  margin-bottom: -118px;
+  top: -52px;
+  margin-bottom: -52px;
 
   @media (max-width: 1120px) {
     top: -36px;
@@ -17,9 +17,31 @@
     padding-top: 30px;
     padding-bottom: 30px;
     background-image: none;
-    background: linear-gradient(107.96deg, #B1C4FF 3.83%, #7899FF 48.38%, #FFB9FC 95.22%);
+    background: linear-gradient(107.96deg, #b7f6ff 3.83%, #ffc8fd 95.22%);
     top: 0px;
     margin-bottom: 0;
+  }
+
+  &_desc {
+    top: -29px;
+    margin-bottom: -29px;
+
+    @media (max-height: 800px) {
+      display: none;
+    }
+
+    @media (max-width: 770px) and (max-height: 1030px) {
+      display: none;
+    }
+
+    @media (max-width: 1120px) {
+      top: -45px;
+      margin-bottom: -45px;
+    }
+
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 }
 
@@ -62,6 +84,10 @@
   font-weight: 700;
   text-align: center;
 
+  &_desc {
+    font-weight: 500;
+  }
+
   @media (max-width: 650px) {
     font-size: 20px;
     margin-bottom: 20px;
@@ -73,11 +99,8 @@
   align-items: center;
   gap: 30px;
 
-  @media (max-width: 940px) {
+  @media (max-width: 1050px) {
     gap: 15px;
-  }
-
-  @media (max-width: 890px) {
     flex-direction: column;
   }
 }
@@ -93,6 +116,24 @@
 
   @media (max-width: 650px) {
     flex-direction: column;
+  }
+}
+
+.line-form__input-wrapper {
+  @include max-width(354px);
+  padding-left: 36px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/form/#{$i}.svg');
+    }
   }
 }
 
@@ -121,7 +162,9 @@
     color: #a9a9a9;
   }
 
-  &:focus, &:hover, &:active {
+  &:focus,
+  &:hover,
+  &:active {
     border-bottom: 2px solid $black;
   }
 }
@@ -131,7 +174,7 @@
   text-align: center;
   color: #a9a9a9;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 12px;
 
   @media (max-width: 650px) {
     font-size: 12px !important;
