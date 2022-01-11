@@ -1,17 +1,13 @@
 .calc {
-  min-height: 731px;
-  @include bg;
-  background-image: url('/src/img/bgs/calc-bg.jpg');
-  padding-top: 60px;
+  padding-top: 25px;
   padding-bottom: 60px;
 
   @media (max-width: 991px) {
-    padding-top: 50px;
     padding-bottom: 50px;
   }
 
   @media (max-width: 650px) {
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 30px;
   }
 }

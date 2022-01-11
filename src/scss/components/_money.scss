@@ -1,12 +1,15 @@
 .money {
   padding-top: 60px;
   padding-bottom: 60px;
-  min-height: 1042px;
   @include bg;
   background-image: url('/src/img/bgs/money-bg.jpg');
+  position: relative;
+  top: -37px;
+  margin-bottom: -37px;
+  z-index: -1;
 
   @media (max-width: 991px) {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 50px;
   }
 
@@ -14,29 +17,24 @@
     padding-top: 30px;
     padding-bottom: 30px;
     min-height: auto;
+    top: 0px;
+    margin-bottom: 0;
   }
 }
 
 .money__title {
   @include title;
-  @include max-width(811px);
+  margin-bottom: 25px;
+  color: black;
+
+  span {
+    color: $blue;
+  }
 }
 
-.money__subtitle {
-  @include max-width(730px);
-  margin-left: auto;
-  font-size: 28px;
-  line-height: 1.21;
-  margin-bottom: 5px;
-  position: relative;
-  top: -30px;
-
-  @media (max-width: 1120px) {
-    margin-left: 0;
-    max-width: 100%;
-    margin-bottom: 30px;
-    top: 0px;
-  }
+.money__text-box {
+  margin-bottom: 50px;
+  @include max-width(636px);
 
   @media (max-width: 650px) {
     margin-bottom: 20px;
@@ -44,37 +42,15 @@
 }
 
 .money__text-block {
-  &:nth-child(1) {
-    margin-bottom: 50px;
+  margin-bottom: 33px;
 
-    @media (max-width: 650px) {
-      margin-bottom: 20px;
-    }
-
-    .money__text {
-      @include max-width(825px);
-    }
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  &:nth-child(2) {
-    margin-bottom: 90px;
-
-    @media (max-width: 650px) {
-      margin-bottom: 30px;
-    }
-
-    .money__text {
-      @include max-width(730px);
-    }
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
   }
-}
-
-.money__text-title {
-  font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 0;
-  color: $blue;
-  text-transform: uppercase;
 }
 
 .money__text {
@@ -84,7 +60,6 @@
 
   b {
     font-weight: bold;
-    color: $blue;
   }
 }
 
@@ -96,8 +71,8 @@
   &::before {
     content: url('/src/img/money-img.png');
     position: absolute;
-    right: -976px;
-    top: -471px;
+    right: -963px;
+    top: -533px;
 
     @media (max-width: 900px) {
       content: none;
@@ -106,14 +81,13 @@
 }
 
 .money__item {
-  padding-left: 190px;
+  padding-left: 116px;
   position: relative;
-  margin-bottom: 114px;
+  margin-bottom: 56px;
   font-size: 18px;
   line-height: 1.22;
 
   @media (max-width: 650px) {
-    padding-left: 110px;
     margin-bottom: 30px;
   }
 
@@ -122,8 +96,8 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
     @include bg;
     content: '';
 
@@ -140,7 +114,6 @@
   }
 
   span {
-    text-transform: uppercase;
     font-size: 22px;
     line-height: 1.27;
     font-weight: bold;

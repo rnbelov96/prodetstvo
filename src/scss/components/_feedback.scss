@@ -17,9 +17,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
     background-image: none;
-    background: linear-gradient(107.96deg, #b7f6ff 3.83%, #ffc8fd 95.22%);
-    top: 0px;
-    margin-bottom: 0;
+    background: linear-gradient(107.96deg, #b7f6ff 3.83%, #ffc8fd 95.22%) !important;
+    top: 0px !important;
+    margin-bottom: 0 !important;
   }
 
   &_desc {
@@ -42,6 +42,19 @@
     @media (max-width: 650px) {
       display: none;
     }
+  }
+
+  &_bottom {
+    top: 0px;
+    margin-bottom: 0;
+  }
+
+  &_low {
+    min-height: 320px;
+    background-image: url('/src/img/bgs/feedback-bottom-bg.png');
+    top: -37px;
+    margin-bottom: -37px;
+    padding-bottom: 40px;
   }
 }
 

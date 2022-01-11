@@ -1,12 +1,11 @@
 .market {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   @include bg;
   background-image: url('/src/img/bgs/market-bg.jpg');
 
   @media (max-width: 991px) {
     padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   @media (max-width: 650px) {
@@ -17,37 +16,33 @@
 
 .market__title {
   @include title;
+  @include max-width(921px);
+  color: black;
+  margin-bottom: 8px;
+
+  span {
+    color: $blue;
+  }
 }
 
 .market__text {
-  @include max-width(730px);
-  margin-left: auto;
-  font-size: 28px;
-  line-height: 1.21;
-  margin-bottom: 5px;
+  @include max-width(1110px);
+  font-size: 22px;
+  line-height: 1.27;
+  margin-bottom: 8px;
   position: relative;
-  top: -30px;
 
   @media (max-width: 1120px) {
-    margin-left: 0;
     max-width: 100%;
-    margin-bottom: 30px;
-    top: 0px;
-  }
-
-  @media (max-width: 650px) {
-    margin-bottom: 20px;
   }
 }
 
 .market__list-title {
-  @include max-width(950px);
+  @include max-width(1110px);
   font-weight: bold;
-  color: $blue;
-  text-transform: uppercase;
-  font-size: 28px;
-  line-height: 1.21;
-  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 1.27;
+  margin-bottom: 16px;
 }
 
 .market__list {
@@ -80,11 +75,20 @@
 .market__item-title {
   font-weight: bold;
   text-align: center;
-  font-size: 18px;
-  padding-bottom: 17px;
+  font-size: 22px;
+  line-height: 1.27;
   margin-bottom: 0;
-  text-transform: uppercase;
   border-bottom: 3px solid #ffe86d;
+  min-height: 65px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6px;
+
+  @media (max-width: 650px) {
+    min-height: auto;
+  }
 }
 
 .market__item-text {

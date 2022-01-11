@@ -1,7 +1,6 @@
 .numbers {
-  background: rgba(45, 70, 147, 0.05);
   padding-top: 60px;
-  padding-bottom: 84px;
+  padding-bottom: 104px;
 
   @media (max-width: 1200px) {
     padding-bottom: 30px;
@@ -18,17 +17,21 @@
 
 .numbers__title {
   @include title;
-}
+  margin-bottom: 71px;
+  @include max-width(824px);
+  margin-left: auto;
+  color: black;
 
-.numbers__text {
-  padding-left: 377px;
-  @include max-width(912px);
-  font-size: 28px;
-  margin-bottom: 52px;
+  span {
+    color: $blue;
+  }
 
-  @media (max-width: 800px) {
-    padding-left: 0;
-    margin-bottom: 40px;
+  @media (max-width: 1200px) {
+    margin-right: auto;
+  }
+
+  @media (max-width: 1120px) {
+    margin-bottom: 50px;
   }
 
   @media (max-width: 650px) {
@@ -42,6 +45,7 @@
   flex-wrap: wrap;
   gap: 100px;
   @include max-width(800px);
+  margin-left: auto;
 
   @media (max-width: 1200px) {
     margin-left: auto;
@@ -61,7 +65,7 @@
   font-size: 28px;
 
   @media (max-width: 650px) {
-    padding-left: 40px;
+    padding-left: 0px;
   }
 
   &::before {
@@ -82,7 +86,6 @@
   }
 
   span {
-    text-transform: uppercase;
     font-size: 22px;
     line-height: 1.27;
     font-weight: bold;
@@ -96,6 +99,10 @@
       font-size: 30px;
     }
   }
+
+  b.large {
+    font-size: 48px;
+  }
 }
 
 .numbers__container {
@@ -104,17 +111,18 @@
 
 .numbers__owner-img {
   position: absolute;
-  right: -406px;
-  top: -345px;
+  left: -317px;
+  top: -215px;
 
   @media (max-width: 1500px) {
-    right: -292px;
-    top: -332px;
+    left: -201px;
+    top: -235px;
+    z-index: -2;
   }
 
   @media (max-width: 1200px) {
     position: relative;
-    right: 0;
+    left: 0;
     top: 0;
     @include max-width(645px);
     display: block;

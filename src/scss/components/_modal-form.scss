@@ -6,7 +6,6 @@
   padding-left: 22px;
   padding-right: 22px;
   padding-bottom: 30px;
-  min-height: 445px;
 
   @media (max-width: 650px) {
     min-height: auto;
@@ -29,7 +28,7 @@
     width: 98%;
 
     .modal-form__title {
-      text-align: left;
+      text-align: center;
     }
   }
 }

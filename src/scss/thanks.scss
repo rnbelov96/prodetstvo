@@ -79,7 +79,7 @@
   }
 
   @media (max-width: 1300px) {
-    right: -400px;
+    right: -479px;
   }
 
   @media (max-width: 1120px) {
@@ -165,7 +165,7 @@
   &:nth-child(1)::after {
     width: 60px;
     height: 60px;
-    background-image: url('/src/img/icons/insta-thanks.svg');
+    background-image: url('/src/img/icons/insta.png');
   }
   &:nth-child(2)::after {
     width: 65px;
@@ -195,12 +195,28 @@
   }
 }
 
+.thanks__mark-link {
+  color: $blue;
+  text-decoration: underline;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: $blue;
+  }
+}
+
 .thanks__back-link {
   color: #7b00b5;
-  text-transform: uppercase;
-  text-decoration: underline;
+  font-weight: 700;
   font-size: 20px;
   display: inline-block;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: #7b00b5;
+  }
 
   @media (max-width: 1120px) {
     position: relative;

@@ -17,19 +17,22 @@
 
 .steps__title {
   @include title;
+  @include max-width(890px);
+  margin-bottom: 8px;
+  color: black;
+
+  span {
+    color: $blue;
+  }
 }
 
 .steps__text {
-  @include max-width(734px);
-  margin-left: auto;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.27;
-  margin-bottom: 60px;
+  margin-bottom: 43px;
 
   @media (max-width: 1120px) {
-    margin-left: 0;
     max-width: 100%;
-    margin-bottom: 60px;
   }
 
   @media (max-width: 900px) {
@@ -41,10 +44,22 @@
   }
 }
 
+.steps__content {
+  margin-bottom: 64px;
+
+  @media (max-width: 900px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
 .steps__step-box {
   display: flex;
   gap: 30px;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -86,7 +101,7 @@
 .steps__left-side {
   @include max-width(350px);
   position: relative;
-  top: -30px;
+  top: -13px;
 
   @media (max-width: 900px) {
     top: 0px;
@@ -103,9 +118,9 @@
 }
 
 .steps__step-title {
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 1.21;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.27;
   margin-bottom: 0;
 
   @media (max-width: 900px) {
