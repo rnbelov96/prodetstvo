@@ -11,6 +11,34 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 521px;
+    height: 541px;
+    top: 74px;
+    right: -507px;
+    @include bg;
+    background-size: contain;
+    background-image: url('/src/img/controll-img.png');
+
+    @media (max-width: 1120px) {
+      display: block;
+      top: 0px;
+      right: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 650px) {
+      width: 300px;
+      height: 311px;
+      margin-top: 20px;
+    }
+  }
 }
 
 .controll__title {
@@ -40,17 +68,6 @@
   @include reset-list;
   margin-bottom: 50px;
   position: relative;
-
-  &::after {
-    content: url('/src/img/controll-img.png');
-    position: absolute;
-    right: -505px;
-    top: -158px;
-
-    @media (max-width: 1120px) {
-      content: none;
-    }
-  }
 
   @media (max-width: 650px) {
     margin-bottom: 20px;

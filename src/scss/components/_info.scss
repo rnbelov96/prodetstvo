@@ -5,15 +5,18 @@
   padding-top: 60px;
   padding-bottom: 131px;
 
+  @media (min-width: 1921px) {
+    background-size: contain;
+  }
+
   @media (max-width: 991px) {
     padding-top: 50px;
   }
 
   @media (max-width: 650px) {
     padding-top: 30px;
-    padding-bottom: 30px;
-    min-height: 571px;
-    background-position: -850px center;
+    background-image: none;
+    padding-bottom: 0;
   }
 }
 
@@ -50,5 +53,17 @@
 
   b {
     font-weight: bold;
+  }
+}
+
+.info__img {
+  display: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+
+  @media (max-width: 650px) {
+    display: block;
   }
 }
