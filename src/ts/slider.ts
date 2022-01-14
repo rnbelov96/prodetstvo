@@ -422,3 +422,12 @@ const initSlider = (options: {
 
   wrapperEl.addEventListener('mouseleave', swipeLeave);
 };
+
+initSlider({
+  imagesLength: 3,
+  isFlexible: false,
+  maxMode: 1,
+  sliderSectionName: 'slider',
+  withButtons: false,
+  withNav: true,
+});

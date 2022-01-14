@@ -6,7 +6,34 @@
 
   @media (max-width: 650px) {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    left: -393px;
+    top: 298px;
+    width: 524px;
+    height: 590px;
+    @include bg;
+    background-image: url('/src/img/facts-bottom-img.png');
+    background-size: contain;
+    margin-top: 10px;
+
+    @media (max-width: 1300px) {
+      position: relative;
+      left: 0px;
+      top: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 650px) {
+      width: 300px;
+      height: 266px;
+    }
   }
 }
 
@@ -19,6 +46,33 @@
   @media (max-width: 650px) {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 360px;
+    height: 692px;
+    top: -23px;
+    right: -403px;
+    @include bg;
+    background-size: contain;
+    background-image: url('/src/img/facts-top-img.png');
+
+    @media (max-width: 1300px) {
+      display: block;
+      top: 0px;
+      right: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 650px) {
+      width: 300px;
+      height: 576.6px;
+    }
   }
 }
 
@@ -94,16 +148,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 26px;
-    &::after {
-      position: absolute;
-      top: -288px;
-      right: -403px;
-      content: url('/src/img/facts-top-img.png');
-
-      @media (max-width: 1300px) {
-        content: none;
-      }
-    }
   }
 
   &_bottom {
@@ -126,16 +170,6 @@
         padding-left: 127px;
       }
     }
-    &::after {
-      position: absolute;
-      top: -12px;
-      left: -389px;
-      content: url('/src/img/facts-bottom-img.png');
-
-      @media (max-width: 1300px) {
-        content: none;
-      }
-    }
   }
 }
 
@@ -144,7 +178,7 @@
   padding-left: 127px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #ffffff;
 
   @media (max-width: 650px) {
     padding-left: 0 !important;
