@@ -1,12 +1,12 @@
 .desc {
   @include bg;
-  min-height: 610 px;
+  min-height: 610px;
   background-image: url('/src/img/bgs/desc-bg.jpg');
   padding-top: 66px;
   padding-bottom: 46px;
 
   @media (max-width: 650px) {
-    padding-top: 10px;
+    padding-top: 25px;
     padding-bottom: 30px;
     min-height: auto;
   }
@@ -31,8 +31,8 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 18px !important;
-    margin-bottom: 10px;
+    font-size: 22px !important;
+    margin-bottom: 15px;
   }
 }
 
@@ -64,6 +64,7 @@
 
   @media (max-width: 650px) {
     gap: 15px;
+    display: none;
   }
 }
 
@@ -96,6 +97,16 @@
     }
   }
 
+  &_first::before {
+    background-image: url('/src/img/icons/desc/1.svg') !important;
+  }
+  &_second::before {
+    background-image: url('/src/img/icons/desc/2.svg') !important;
+  }
+  &_third::before {
+    background-image: url('/src/img/icons/desc/3.svg') !important;
+  }
+
   b {
     font-weight: 700;
     color: $blue;
@@ -105,6 +116,9 @@
     padding-left: 40px;
     padding-bottom: 8px;
     min-height: auto;
+    font-size: 16px;
+    width: 300px;
+    margin-bottom: 20px;
 
     &::before {
       width: 30px;
