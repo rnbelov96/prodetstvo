@@ -140,19 +140,23 @@
   margin-bottom: 22px;
 
   @media (max-width: 720px) {
-    gap: 40px;
-    margin-bottom: 30px;
+    gap: 13px;
+    margin-bottom: 20px;
   }
 }
 
 .thanks__item {
-  padding-right: 85px;
   position: relative;
   font-size: 20px;
   line-height: 1.4;
 
   a {
     color: black;
+    padding-right: 85px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &:hover,
     &:focus,
@@ -180,6 +184,7 @@
     transform: translateY(-50%);
     content: '';
     @include bg;
+    pointer-events: none;
   }
 }
 
